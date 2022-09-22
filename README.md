@@ -44,3 +44,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+# Getting Started with Create React App
+
+If you finish to create our app. Now, we learn to start Reactjs with Docker.
+
+## First Step
+
+The first step, you can make the `dockerfile`. You can copy paste this code into your `dockerfile`.
+
+<blink> 
+    FROM node:16.3.0-alpine
+    WORKDIR /app
+
+    ENV PATH /app/node_modules/.bin:$PATH
+
+    COPY package.json ./
+    COPY package-lock.json ./
+    RUN npm install
+
+    COPY . ./
+
+    CMD ["npm", "start"]
+
+</blink>
