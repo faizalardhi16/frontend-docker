@@ -53,8 +53,10 @@ If you finish to create our app. Now, we learn to start Reactjs with Docker.
 
 The first step, you can make the `dockerfile`. You can copy paste this code into your `dockerfile`.
 
-<blink> 
+<blink>
+
     FROM node:16.3.0-alpine
+
     WORKDIR /app
 
     ENV PATH /app/node_modules/.bin:$PATH
